@@ -1,0 +1,727 @@
+/* EmerGe Website Styles - Updated with bold black headers and background image */
+:root {
+  --primary-color: #34a19a; /* cyan*/
+  --secondary-color: #000000; /* Changed from purple to black */
+  --tertiary-color: #27ae60; /* Green for some accents */
+  --background-color: white; /* Light background */
+  --text-color: #333; /* Dark text */
+  --light-gray: #e9ecef;
+  --dark-gray: #222; /* Darker gray/black */
+  --header-font: 'Georgia', serif; /* Different font for headers */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.8;
+  color: var(--text-color);
+  /* background: url('images/background.png') no-repeat center top; */
+  background-image: image-set(
+  url('images/background.webp') type('image/webp'),
+  url('images/background.png') type('image/png')
+);
+  background-size: cover;
+  background-attachment: fixed; /* Ensures it stays in place */
+  background-color: var(--background-color); /* Fallback color */
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background-color: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.logo img {
+  height: 30px;
+  /* margin-right: 15px; */
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Navigation tabs similar to fqxi.org */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:  #34a19a;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: block;
+  background-color: transparent;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a.active {
+  background-color: var(--primary-color);
+  color: var(--dark-gray);
+}
+
+.hero {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #34a19a; /* Keeps the yellow background */
+  color: var(--dark-gray);
+  position: relative;
+  min-height: 400px;
+}
+
+.hero:before {
+  padding: 100px 0;
+  text-align: center;
+  background: url('images/background.png') no-repeat center center / cover;
+  color: var(--dark-gray);
+  position: relative;
+  min-height: 400px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--dark-gray);
+  font-weight: 700;
+  font-family: var(--header-font);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: var(--dark-gray);
+  text-align: center;
+}
+
+.section {
+  padding: 30px 0;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-family: var(--header-font);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.member-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.member-image {
+  width: 100%;
+  height: 350px;  /* Adjust based on preference */
+  overflow: hidden;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures uniform cropping */
+  object-position: center 20%; /* This is the key change */
+  border-radius: 8px;
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-family: var(--header-font);
+}
+
+.member-info .affiliation {
+  font-style: italic;
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+}
+
+.member-info p {
+  margin-bottom: 15px;
+}
+
+.member-links {
+  text-align: center;
+  margin-top: 15px; /* Pushes the links further down */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Adds spacing between links */
+}
+
+.member-links a {
+  display: inline-block;
+  padding: 8px 12px; /* Adds spacing around links */
+  background-color: rgba(76, 135, 224, 0.2); /* Subtle background highlight */
+  border-radius: 5px; /* Soft rounded edges */
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.member-links a:hover {
+  /* text-decoration: underline; */
+  color: rgba(8, 64, 148, 0.2);
+  opacity: 0.8;
+}
+
+.about-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workshop-info {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workshop-header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 30px;
+}
+
+.workshop-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workshop-header-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+}
+
+.workshop-header-overlay h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-family: var(--header-font);
+}
+
+.workshop-info h3, .workshop-info h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-family: var(--header-font);
+}
+
+.workshop-info h4 {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin: 25px 0 15px;
+}
+
+.workshop-date {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--dark-gray);
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.workshop-sponsors {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 900px;
+}
+
+.workshop-sponsors h4 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.workshop-sponsors p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 150px; /* Space between sponsors */
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sponsor {
+  text-align: center;
+}
+
+.sponsor p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.sponsor a img {
+  width: 280px;  /* Adjust as needed */
+  height: auto;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.sponsor a img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.9;
+}
+
+.workshop-venue {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.venue-image {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.venue-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.venue-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.publications-list {
+  list-style: none;
+}
+
+.publications-list li {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.publications-list h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-family: var(--header-font);
+}
+
+.publications-list .authors {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.publications-list .journal {
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+}
+
+.publications-list a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.publications-list a:hover {
+  /* text-decoration: underline; */
+  color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--dark-gray);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* footer a:hover {
+  /* text-decoration: underline; */
+/* } */ */
+
+/* Contact form styles */
+.contact-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-submit {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.form-submit:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-gray);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+  
+  nav ul {
+    margin-top: 15px;
+  }
+  
+  nav ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  nav ul li a {
+    padding: 6px 10px;
+  }
+  
+  .hero {
+    padding: 40px 0;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .workshop-header {
+    height: 200px;
+  }
+  
+  .workshop-header-overlay h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 5px;
+  }
+  
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .workshop-header {
+    height: 150px;
+  }
+  
+  .workshop-header-overlay h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.banner {
+  width: 100%;
+  background: url('../images/background.png') no-repeat center center / cover;
+  background-attachment: relative; 
+  padding: 100px 0;
+  text-align: center;
+  color: var(--dark-gray);
+  position: relative;
+  min-height: 400px;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: 700;
+  font-family: var(--header-font);
+}
+
+.banner p {
+  font-size: 1.4rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: black;
+  text-align: center;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+  }
+  
+  .header-content {
+      padding: 8px 0;
+  }
+  
+  .logo img {
+      height: 40px;
+      margin-right: 10px;
+  }
+  
+  .logo h1 {
+      font-size: 1.5rem;
+  }
+  
+  .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      font-size: 1.5rem;
+      color:  #34a19a;
+      cursor: pointer;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 56px;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      padding: 5px 0;
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+  
+  /* Add padding to body to prevent content from being hidden under fixed header */
+  body {
+      padding-top: 60px;
+  }
+
+  nav ul li {
+      text-align: center;
+      padding: 10px 0;
+  }
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+  .workshop-venue {
+    flex-direction: column;
+  }
+
+  .venue-image,
+  .venue-info {
+    min-width: 100%;
+  }
+
+  .venue-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.indent-list {
+  list-style: none;
+  padding-left: 1.5em;
+  margin-top: 20px;
+}
+
+.indent-list li {
+  margin-bottom: 10px;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+}
+
+
+
