@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EmerGe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="EmerGe Logo">
+                        <h1>EmerGe</h1>
+                    </a>
+                </div>
+                
+<!-- Mobile Menu Toggle -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                
+<nav>
+    <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="workshop.html">Workshop</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+</div>
+</div>
+</header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-content" style="max-width: 800px; margin: 0 auto;">
+                <p style="text-align: center; margin-bottom: 30px;">We welcome inquiries about the EmerGe collaboration, our research, and the upcoming workshop. Our team is committed to fostering open communication and collaboration within the theoretical physics community. Please feel free to reach out to us using the information below.</p>
+                
+                <!-- <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;"> -->
+                    <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);margin-bottom: 40px;">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 15px;">General Inquiries</h3>
+                        <p><strong>Email:</strong> <a href="mailto:info@emerge-collab.org">emerge.collaboration@gmail.com</a></p>
+                        <p style="margin-top: 15px;">For questions about the collaboration, research opportunities, or general information, please contact us at this address.</p>
+                    </div>
+                    
+                    <!-- <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Workshop Information</h3>
+                        <p><strong>Email:</strong> <a href="mailto:workshop@emerge-collab.org">emerge.collaboration@gmail.com</a></p>
+                        <p style="margin-top: 15px;">For specific questions about the upcoming workshop on November 17-21, 2025, including registration, abstract submission, and logistical details, please use this dedicated email address.</p>
+                    </div>
+                </div> -->
+                
+                <!-- <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Contact Individual Members</h3>
+                    <p>To contact individual members of the EmerGe collaboration, please visit their profiles on the <a href="members.html">Members</a> page, where you can find links to their personal websites, academic profiles, and institutional contact information.</p>
+                    
+                    <p style="margin-top: 15px;">Our members welcome inquiries about their research and are open to discussing potential collaborations. Early-career researchers and students interested in our work are particularly encouraged to reach out to learn more about potential opportunities.</p>
+                </div> -->
+                
+                <!-- <div style="background-color: var(--light-gray); padding: 30px; border-radius: 8px; margin-bottom: 40px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Join Our Mailing List</h3>
+                    <p>Stay updated on the EmerGe collaboration's activities, publications, and upcoming events by joining our mailing list. We send periodic newsletters with information about new research results, upcoming workshops and conferences, and opportunities for collaboration.</p>
+                    
+                    <p style="margin-top: 15px;">To subscribe, send an email to <a href="mailto:subscribe@emerge-collab.org">subscribe@emerge-collab.org</a> with the subject "Subscribe" to be added to our list. You can unsubscribe at any time by sending an email to the same address with the subject "Unsubscribe".</p>
+                </div> -->
+                
+                <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); margin-bottom: 40px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 20px;">Contact Form</h3>
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+                        <input type="hidden" name="form-name" value="contact">
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500;">Name *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Inter', sans-serif;">
+                        </div>
+                    
+                        <div style="margin-bottom: 20px;">
+                            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Email *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Inter', sans-serif;">
+                        </div>
+                    
+                        <div style="margin-bottom: 20px;">
+                            <label for="subject" style="display: block; margin-bottom: 8px; font-weight: 500;">Subject *</label>
+                            <select id="subject" name="subject" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Inter', sans-serif;">
+                                <option value="">Please select</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="workshop">Workshop Information</option>
+                                <option value="collaboration">Research Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    
+                        <div style="margin-bottom: 20px;">
+                            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Message *</label>
+                            <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Inter', sans-serif;"></textarea>
+                        </div>
+                    
+                        <!-- HoneyPot Field to Block Spam -->
+                        <div style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </div>
+                    
+                        <button type="submit" style="background-color: var(--primary-color); color: white; border: none; padding: 12px 24px; border-radius: 4px; font-weight: 500; cursor: pointer; font-family: 'Inter', sans-serif;">Send Message</button>
+                    </form>
+
+                </div>
+                
+                <!-- <div style="text-align: left; margin-top: 40px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Institutional Affiliations</h3>
+                    <p>The EmerGe collaboration includes researchers from the following institutions:</p>
+                    <ul class="indent-list">
+                        <li style="margin-bottom: 10px;"><strong>IQOQI-Vienna</strong>, Institute for Quantum Optics and Quantum Information, Vienna, Austria</li>
+                        <li style="margin-bottom: 10px;"><strong>Western University</strong>, Department of Physics, Canada</li>
+                        <li style="margin-bottom: 10px;"><strong>Nordita</strong>, Nordic Institute for Theoretical Physics, Stockholm, Sweden</li>
+                        <li style="margin-bottom: 10px;"><strong>Stockholm University</strong>, Department of Physics, Stockholm, Sweden</li>
+                        <li style="margin-bottom: 10px;"><strong>University of Geneva</strong>, Department of Philosophy, Geneva, Switzerland</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">While our members are affiliated with these institutions, the EmerGe collaboration operates as an independent research network, fostering collaboration across institutional and disciplinary boundaries.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 EmerGe - Emergent Geometries</p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - EmerGe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="EmerGe Logo">
+                        <h1>EmerGe</h1>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                
+                <nav>
+                    <ul id="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="members.html">Members</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="workshop.html">Workshop</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Works</h2>
+            </div>
+            <div class="publications-content">
+                <p>The EmerGe collaboration is happy to announce our first two papers, scheduled for release in 2025. These papers represent the initial results of our collaborative research on emergent geometric structures in theoretical physics. Our interdisciplinary approach brings together insights from quantum gravity, string theory, quantum information theory, and cosmology to develop new frameworks for understanding how geometric concepts emerge from underlying physical principles.</p>
+                
+                <h3 style="margin-top: 30px; color: var(--secondary-color);">Papers (2025)</h3>
+                
+                <div style="margin: 40px 0; padding: 25px; background-color: var(--light-gray); border-radius: 8px;">
+                    <!-- <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Upcoming Publications</h3> -->
+                    
+                    <div class="research-area" style="margin-bottom: 30px; padding: 25px; background-color: white; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 15px;">On independent subsystems: from classical mechanics to quantum field theory and beyond</h4>
+                        <p><em>Authors: Eugenia Colafranceschi, Andrea Di Biagio, Joakim Flinckman, Guilherme Franzmann, Jan Glowacki, Niels Linnemann, and Florian Niedermann</em></p>
+                        
+                        <p>This paper explores the fundamental question of what constitutes a system in physics and how systems can be thought of as consisting of independent subsystems. Beginning with a review of these concepts in classical mechanics, the work extends the discussion to quantum mechanics and quantum field theory contexts.</p>
+                        
+                        <p>The research highlights that despite the differences between these frameworks, the physical intuition surrounding independent subsystems is rooted in probability theory and permeates across these theories. The authors identify von Neumann algebras as the unifying mathematical formalism that connects these descriptions. The paper concludes by examining how much of this underlying structure can be preserved in quantum gravity, exploring both the challenges and potential resolutions.</p>
+                    </div>
+                    
+                    <div class="research-area" style="margin-bottom: 30px; padding: 25px; background-color: white; border-radius: 8px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);">
+                        <h4 style="color: var(--secondary-color); margin-bottom: 15px;">Microcausality in Gravity</h4>
+                        <p><em>Authors: Eugenia Colafranceschi, Andrea Di Biagio, Joakim Flinckman, Guilherme Franzmann, Jan Glowacki, Niels Linnemann, and Florian Niedermann</em></p>
+                        
+                        <p>This work addresses the status of microcausality in gravitational systems. It examines how gauge invariance, gravitational dressing, and diffeomorphism invariance affect our ability to localize information and define causal structure. The paper discusses both perturbative and non-perturbative perspectives, with implications for locality in quantum gravity.</p>
+
+                        <!-- <p>This collaborative work investigates the concept of microcausality in gravitational theories. The paper examines various notions of causality and gravity, with particular focus on why microcausality is a crucial concept for understanding the fundamental nature of spacetime.</p>
+                        
+                        <p>The research explores the relationship between quantum field theory principles, such as gauge invariance and dressed states/operators, and their implications for causal structures in gravitational contexts. This work represents an important step in bridging quantum field theory and gravity, addressing key conceptual and mathematical challenges in contemporary theoretical physics.</p> -->
+                    </div>
+                
+                 </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 EmerGe - Emergent Geometries</p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
